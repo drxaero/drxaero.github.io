@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "HTMLHint.vscode-htmlhint",
+    "esbenp.prettier-vscode",
     "hossaini.bootstrap-intellisense",
     "davidsanders.search-under-cursor",
     "streetsidesoftware.code-spell-checker",
