@@ -1,10 +1,10 @@
-.checkbox {
+.color_mode_switch_input {
   opacity: 0;
   position: absolute;
   display: none !important;
 }
 
-.checkbox-label {
+.color_mode_switch_label {
   background-color: #111;
   width: 50px;
   height: 26px;
@@ -21,7 +21,7 @@
 .fa-sun {
   color: #f39c12;
 }
-.checkbox-label .ball {
+.color_mode_switch_label .ball {
   background-color: #fff;
   width: 22px;
   height: 22px;
@@ -32,9 +32,9 @@
   transition: transform 0.1s linear;
 }
 
-.checkbox:checked + .checkbox-label .ball {
+.color_mode_switch_input:checked + .color_mode_switch_label .ball {
   transform: translateX(24px);
 }
-#checkbox {
+#color_mode_switch_input_id {
   display: none;
 }
