@@ -38,3 +38,7 @@
 #color_mode_switch_input_id {
   display: none;
 }
+
+.aws-badge {
+  max-width: 15rem;
+}
