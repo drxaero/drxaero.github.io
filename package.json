@@ -1,0 +1,27 @@
+{
+  "name": "drxaero.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass --style=compressed assets/sass/style.scss:assets/css/style.css",
+    "release": "npm run compile:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drxaero/drxaero.github.io.git"
+  },
+  "keywords": [
+    "drxaero"
+  ],
+  "author": "drxaero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drxaero/drxaero.github.io/issues"
+  },
+  "homepage": "https://github.com/drxaero/drxaero.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.84.0"
+  }
+}
