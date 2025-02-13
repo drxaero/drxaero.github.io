@@ -1,19 +1,28 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const htmlElement = document.documentElement;
     const switchElement = document.getElementById('color-mode-switch-input-id');
+    const bsTheme = 'bsTheme';
+    const lightTheme = 'light';
+    const darkTheme = 'dark';
 
-    // Set the default theme to dark if no setting is found in local storage
-    const currentTheme = localStorage.getItem('bsTheme') || 'dark';
-    htmlElement.setAttribute('data-bs-theme', currentTheme);
-    switchElement.checked = currentTheme === 'light';
+    // Update theme ans save to localStorage
+    const updateTheme = (theme) => {
+        htmlElement.setAttribute('data-bs-theme', theme);
+        localStorage.setItem(bsTheme, theme);
+    };
 
-    switchElement.addEventListener('change', function () {
-        if (this.checked) {
-            htmlElement.setAttribute('data-bs-theme', 'light');
-            localStorage.setItem('bsTheme', 'light');
-        } else {
-            htmlElement.setAttribute('data-bs-theme', 'dark');
-            localStorage.setItem('bsTheme', 'dark');
-        }
-    });
+    const initializeTheme = () => {
+        const savedTheme = localStorage.getItem(bsTheme) || darkTheme;
+        updateTheme(savedTheme);
+        switchElement.checked = savedTheme === lightTheme;
+    };
+
+    const handleThemeSwitch = () => {
+        const newTheme = switchElement.checked ? lightTheme : darkTheme;
+        updateTheme(newTheme);
+    };
+
+    initializeTheme();
+
+    switchElement.addEventListener('change', handleThemeSwitch);
 });
