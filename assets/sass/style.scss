@@ -2,17 +2,17 @@ $ball-size: 22px;
 $ball-offset: 2px;
 $ball-translate: 24px;
 
-.color_mode_switch_input {
+.color-mode-switch-input {
   opacity: 0;
   position: absolute;
   display: none !important;
 
-  &:checked+.color_mode_switch_label .ball {
+  &:checked+.color-mode-switch-label .ball {
     transform: translateX($ball-translate);
   }
 }
 
-.color_mode_switch_label {
+.color-mode-switch-label {
   background-color: #111;
   width: 50px;
   height: 26px;
@@ -24,7 +24,7 @@ $ball-translate: 24px;
   align-items: center;
 
   .ball {
-    background-color: #fff;
+    background-color: white;
     width: $ball-size;
     height: $ball-size;
     position: absolute;
@@ -43,7 +43,7 @@ $ball-translate: 24px;
   color: #f39c12;
 }
 
-#color_mode_switch_input_id {
+#color-mode-switch-input-id {
   display: none;
 }
 

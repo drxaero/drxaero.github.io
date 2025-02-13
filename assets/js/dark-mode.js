@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const htmlElement = document.documentElement;
-    const switchElement = document.getElementById('color_mode_switch_input_id');
+    const switchElement = document.getElementById('color-mode-switch-input-id');
 
     // Set the default theme to dark if no setting is found in local storage
     const currentTheme = localStorage.getItem('bsTheme') || 'dark';
