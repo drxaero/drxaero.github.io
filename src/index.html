@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Janus</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Janus C." />
     <meta name="keywords" content="Janus, portal" />
@@ -17,7 +17,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <header class="sticky-top">
@@ -71,7 +70,7 @@
           <a
             href="https://www.credly.com/badges/666d833e-b15b-4668-a7fd-e4962f101c82"
             ><img
-              src="assets/img/aws_certified_cloud_practitioner.png"
+              src="<%=require('./assets/img/aws_certified_cloud_practitioner.png')%>"
               class="img-fluid aws-badge"
               alt="AWS Certified Cloud Practitioner"
           /></a>
@@ -141,7 +140,7 @@
             <div class="carousel-item active">
               <a href="https://janus-dashboard.onrender.com">
                 <img
-                  src="assets/img/janus-dashboard.PNG"
+                  src="<%=require('./assets/img/janus-dashboard.png')%>"
                   class="img-fluid rounded"
                   alt="Interactive dashboard"
                 />
@@ -155,7 +154,7 @@
             <div class="carousel-item">
               <a href="https://www.linkedin.com/in/januscheng/">
                 <img
-                  src="assets/img/janus_n_daughter.jpg"
+                  src="<%=require('./assets/img/janus_n_daughter.jpg')%>"
                   class="img-fluid rounded"
                   alt="Janus and daughter in a park"
                 />
