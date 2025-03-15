@@ -2,18 +2,18 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const dist_path = path.resolve(__dirname, 'dist');
+const dist_abs_path = path.resolve(__dirname, 'dist');
 
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: dist_path,
+    path: dist_abs_path,
     filename: 'bundle.js',
   },
   devServer: {
     static: {
-      directory: dist_path,
+      directory: dist_abs_path,
     },
     port: 3000,
     open: true,
