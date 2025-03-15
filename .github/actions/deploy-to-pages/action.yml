@@ -1,0 +1,23 @@
+name: Deploy to Pages
+description: Upload a folder to GitHub Pages
+inputs:
+  path-to-deploy:
+    description: The folder that holds the artifact that you'd like to upload to GitHub Pages
+    required: true
+outputs:
+  page_url:
+    description: The URL of the deployed content
+    value: ${{ steps.deployment.outputs.page_url }}
+
+runs:
+  using: composite
+  steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ inputs.path-to-deploy }}
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,4 +1,4 @@
-[![Deploy to Pages](https://github.com/drxaero/drxaero.github.io/actions/workflows/static.yml/badge.svg?branch=main)](https://github.com/drxaero/drxaero.github.io/actions/workflows/static.yml)
+[![Build and Deploy to Pages](https://github.com/drxaero/drxaero.github.io/actions/workflows/static.yml/badge.svg?branch=main)](https://github.com/drxaero/drxaero.github.io/actions/workflows/static.yml)
 
 # My personal website
 
