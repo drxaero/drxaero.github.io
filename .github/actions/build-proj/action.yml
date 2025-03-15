@@ -1,0 +1,21 @@
+name: Build Project
+description: Reusable Steps to build the project
+inputs:
+  node-version:
+    description: The node.js version you'd like to use to build this project
+    required: false
+    default: '22.x'
+runs:
+  using: composite
+  steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: 'npm'
+      - name: Install dependencies
+        shell: bash
+        run: npm ci
+      - name: Build project
+        shell: bash
+        run: npm run build
