@@ -34,11 +34,11 @@ module.exports = {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin({ filename: 'style.[contenthash].css' }),
     new HtmlWebpackPlugin({
       title: 'Janus',
       filename: 'index.html',
       template: './src/index.html',
     }),
-    new MiniCssExtractPlugin(),
   ],
 };
