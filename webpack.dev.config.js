@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: dist_abs_path,
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js', // use `[contenthash]` to facilitate browser caching
   },
   devServer: {
     static: {
