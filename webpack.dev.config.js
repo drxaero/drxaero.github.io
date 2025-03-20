@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: dist_abs_path,
     filename: 'bundle.[contenthash].js', // use `[contenthash]` to facilitate browser caching
+    clean: true, // clean the `dist_abs_path` before emitting files
   },
   devServer: {
     static: {
