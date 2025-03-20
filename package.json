@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.prod.config.js",
+    "build": "webpack --config webpack.prod.config.js",
     "dev": "webpack serve --config webpack.dev.config.js",
     "clean": "del-cli --force dist"
   },
