@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: dist_abs_path,
-    filename: 'bundle.[contenthash].js', // use `[contenthash]` to facilitate browser caching
+    filename: '[name].[contenthash].js', // use `[contenthash]` to facilitate browser caching
     clean: true, // clean the `dist_abs_path` before emitting files
   },
   module: {
@@ -35,7 +35,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: 'style.[contenthash].css' }),
+    new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new HtmlWebpackPlugin({
       title: 'Janus',
       filename: 'index.html',
