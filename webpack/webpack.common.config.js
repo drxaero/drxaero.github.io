@@ -2,10 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const dist_abs_path = path.resolve(__dirname, 'dist');
+const dist_abs_path = path.resolve(__dirname, '../dist');
 
-module.exports = {
-  mode: 'production',
+const common = {
   entry: './src/index.js',
   output: {
     path: dist_abs_path,
@@ -42,4 +41,9 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
+};
+
+module.exports = {
+  common,
+  dist_abs_path,
 };
