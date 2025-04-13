@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const dist_abs_path = path.resolve(__dirname, '../dist');
 
 const common = {
-  entry: './src/index.js',
+  entry: './src/assets/js/index.js',
   output: {
     path: dist_abs_path,
     filename: '[name].[contenthash].js', // use `[contenthash]` to facilitate browser caching
