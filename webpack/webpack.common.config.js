@@ -8,7 +8,7 @@ const common = {
   entry: './src/assets/js/index.js',
   output: {
     path: dist_abs_path,
-    filename: '[name].[contenthash].js', // use `[contenthash]` to facilitate browser caching
+    filename: 'js/[contenthash].js', // use `[contenthash]` to facilitate browser caching
     clean: true, // clean the `dist_abs_path` before emitting files
   },
   module: {
@@ -16,6 +16,9 @@ const common = {
       {
         test: /\.(png|jpe?g)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'img/[hash][ext][query]',
+        },
       },
       {
         test: /\.s[ac]ss$/i,
@@ -34,7 +37,7 @@ const common = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
+    new MiniCssExtractPlugin({ filename: 'css/[contenthash].css' }),
     new HtmlWebpackPlugin({
       title: 'Janus',
       filename: 'index.html',
