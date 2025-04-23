@@ -4,11 +4,11 @@ inputs:
   node-version:
     description: The node.js version you'd like to use to build this project
     required: false
-    default: '22.x'
+    default: 22.x
 outputs:
   artifact-path:
     description: The folder contains the built artifact.
-    value: 'dist/'
+    value: dist/
 
 runs:
   using: composite
@@ -17,7 +17,7 @@ runs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ inputs.node-version }}
-          cache: 'npm'
+          cache: npm
       - name: Install dependencies
         shell: bash
         run: npm ci
