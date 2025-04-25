@@ -202,13 +202,47 @@
             <h3>Modern skills to solve your challenges:</h3>
             <div class="accordion" id="accordionSkills">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingMachine">
+                <h2 class="accordion-header" id="headingFirmware">
                   <button
                     class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseMachine"
+                    data-bs-target="#collapseFirmware"
                     aria-expanded="true"
+                    aria-controls="collapseFirmware"
+                  >
+                    <span
+                      class="fas fa-microchip text-success-emphasis me-2"
+                    ></span>
+                    Human-Machine Interface Embedded Software
+                  </button>
+                </h2>
+                <div
+                  id="collapseFirmware"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingFirmware"
+                  data-bs-parent="#accordionSkills"
+                >
+                  <div class="accordion-body">
+                    <ul>
+                      <li>capacitive touch sensing</li>
+                      <li>HID USB and HID I2C</li>
+                      <li>SPI</li>
+                      <li>ARM, MIPS and 8051</li>
+                      <li>Linux driver</li>
+                      <li>...</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMachine">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseMachine"
+                    aria-expanded="false"
                     aria-controls="collapseMachine"
                   >
                     <span
@@ -219,7 +253,7 @@
                 </h2>
                 <div
                   id="collapseMachine"
-                  class="accordion-collapse collapse show"
+                  class="accordion-collapse collapse"
                   aria-labelledby="headingMachine"
                   data-bs-parent="#accordionSkills"
                 >
@@ -229,42 +263,6 @@
                       <li>LangChain for LLM</li>
                       <li>spaCy for NLP</li>
                       <li>chatbot with Chainlit</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFirmware">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFirmware"
-                    aria-expanded="false"
-                    aria-controls="collapseFirmware"
-                  >
-                    <span
-                      class="fas fa-microchip text-success-emphasis me-2"
-                    ></span>
-                    Embedded Firmware for hardware communication and control
-                  </button>
-                </h2>
-                <div
-                  id="collapseFirmware"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingFirmware"
-                  data-bs-parent="#accordionSkills"
-                >
-                  <div class="accordion-body">
-                    <ul>
-                      <li>ARM, MIPS and 8051</li>
-                      <li>Linux driver</li>
-                      <li>HID USB</li>
-                      <li>HID I2C</li>
-                      <li>I2C</li>
-                      <li>SPI</li>
-                      <li>capacitive touch algorithms</li>
-                      <li>...</li>
                     </ul>
                   </div>
                 </div>
