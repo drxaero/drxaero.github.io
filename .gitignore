@@ -143,3 +143,5 @@ dist
 
 # vim
 .*.swp
+
+.DS_Store
